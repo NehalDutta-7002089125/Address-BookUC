@@ -33,6 +33,10 @@ namespace ABdemo
 
             Console.WriteLine("Enter Phone Number");
             contacts.PhoneNumber = Convert.ToInt32(Console.ReadLine());
+
+
+            person.Add(contacts);
+            Console.WriteLine("Contact added to your Address book");
         }
     }
 }
