@@ -16,9 +16,11 @@ namespace ABdemo
                     "2) Find the Display of Contacts\n" +
                     "3) Find the edit contacts\n" +
                     "4) Find the delete contacts\n" +
-                    "5) Ability to add Multiple person in AddressBook" +
-                     "6) Add multiple address book" +
-                     "7) Enter Correct number");
+                    "5) Ability to add Multiple person in AddressBook\n" +
+                     "6) Add multiple address book\n" +
+                     "7) Display new list\n" +
+                     "8)Check Duplicate entry\n" +
+                     "9) Enter Correct number");
                 int option = Convert.ToInt32(Console.ReadLine());
                 int count = 0;
                 switch (option)
@@ -50,11 +52,12 @@ namespace ABdemo
                     case 7:
                         person.DisplayList();
                         break;
-
+                    case 8:
+                        Person.DuplicateContact();
+                        break;
                     default:
                         Console.WriteLine("Choose valid option");
                         break;
-
 
                 }
             }
