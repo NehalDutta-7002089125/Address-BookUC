@@ -181,5 +181,17 @@ namespace ABdemo
 
             }
         }
+        public static void SearchPersonByCity()
+        {
+            Console.WriteLine("enter the name to search: ");
+            string personName = Console.ReadLine();
+            Console.WriteLine("enter the city to search: ");
+            string cityname = Console.ReadLine();
+
+            foreach (var data in person.FindAll(e => e.City == cityname && e.FirstName == personName))
+            {
+                Console.WriteLine("The Contact Details of " + data.City + " are\n:" + data.FirstName + " " + data.LastName + " " + data.Zipcode + " " + data.PhoneNumber);
+            }
+        }
     }
 }

@@ -55,6 +55,9 @@ namespace ABdemo
                     case 8:
                         Person.DuplicateContact();
                         break;
+                    case 9:
+                        Person.SearchPersonByCity();
+                        break;
                     default:
                         Console.WriteLine("Choose valid option");
                         break;
