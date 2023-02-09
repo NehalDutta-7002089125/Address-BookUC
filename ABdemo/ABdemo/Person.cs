@@ -108,5 +108,17 @@ namespace ABdemo
                 }
             }
         }
+        public static void DeleteContact(string name)
+        {
+            Contacts contacts = new Contacts();
+            foreach (var data in person)
+            {
+                if (data.FirstName == name)
+                {
+                    contacts = data;
+                }
+            }
+            person.Remove(contacts);
+        }
     }
 }
