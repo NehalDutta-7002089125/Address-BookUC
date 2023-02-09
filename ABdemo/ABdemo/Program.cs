@@ -58,6 +58,12 @@ namespace ABdemo
                     case 9:
                         Person.SearchPersonByCity();
                         break;
+                    case 10:
+                        Person.ViewPersonByCity();
+                        break;
+                    case 11:
+                        Person.CountPerson();
+                        break;
                     default:
                         Console.WriteLine("Choose valid option");
                         break;

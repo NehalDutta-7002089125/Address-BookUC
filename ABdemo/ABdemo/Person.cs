@@ -193,5 +193,34 @@ namespace ABdemo
                 Console.WriteLine("The Contact Details of " + data.City + " are\n:" + data.FirstName + " " + data.LastName + " " + data.Zipcode + " " + data.PhoneNumber);
             }
         }
+        public static void ViewPersonByCity()
+        {
+            Console.WriteLine("Enter city name ");
+            string city = Console.ReadLine();
+            foreach (var data in person.FindAll(e => e.City == city))
+            {
+                Console.WriteLine("The Contact Details of  person are : \n1.FirstName: " + data.FirstName + "\n2.LastName: " + data.LastName + "\n3.Address: " + data.Address + "\n4.City: " + data.City + "\n5.State: " + data.State + "\n6.Zipcode: " + data.Zipcode + "\n7.PhoneNumber: " + data.PhoneNumber + data.Email + "\n8.EmailId:");
+            }
+        }
+
+        public static void CountPerson()
+        {
+
+            if (person.Count > 0)
+            {
+                Console.WriteLine("Enter the city to search: ");
+                string cityname = Console.ReadLine();
+                int count = 0;
+                foreach (var items in person.FindAll(x => x.City == cityname))
+                {
+                    count++;
+                }
+                Console.WriteLine("No of contacts {0} in city {1}", count, cityname);
+            }
+            else
+            {
+                Console.WriteLine("This contact is not present in AddressBook.");
+            }
+        }
     }
 }
